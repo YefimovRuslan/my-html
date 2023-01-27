@@ -1,0 +1,103 @@
+:root {
+    --primary-background-color: #FFFFFF;
+    --secondary-background-color: #2F303A;
+    --primary-text-color: #757575;
+    --secondary-text-color: #212121;
+    --accent-text-color: #2196F3;
+    --white-text-color: #FFFFFF;
+    --black-transparent-text-color: rgba(255, 255, 255, 0.6);
+    --batt-prim-bg-color: #2196F3;
+    --batt-sec-bg-color: #F5F4FA;
+}
+
+/* убрать точки со списков */
+.list {
+    list-style: none;
+}
+
+/* header */
+/* logo */
+.logo {
+    color: #000000;
+}
+.logo .accent {
+   color: var(--accent-text-color); 
+}
+
+/* navigation */
+.navigation .link {
+    color: var(--secondary-text-color);
+}
+.navigation .link:hover,
+.navigation .link:focus {
+    color: var(--accent-text-color);
+}
+.navigation .link.current {
+    color: var(--accent-text-color);
+}
+/* contacts */
+.contacts .link {
+    color: var(--primary-text-color);
+}
+.contacts .link:hover,
+.contacts .link:focus {
+    color: var(--accent-text-color);
+}
+
+/* body */
+body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color)
+}
+
+/* section */
+.section .section-title {
+    color: var(--secondary-text-color);
+}
+
+/* footer */
+footer {
+    background-color: var(--secondary-background-color);
+}
+
+/* map */
+.addres .addres-map {
+    color: var(--white-text-color);
+}
+.addres .addres-map:hover,
+.addres .addres-map:focus {
+    color: var(--accent-text-color);
+}
+
+/* contact */
+.addres .contact {
+    color: var(--black-transparent-text-color);
+}
+.addres .contact:hover,
+.addres .contact:focus {
+    color: var(--accent-text-color);
+}
+
+/* batton */
+.batton {
+    background-color: var(--primary-background-color);
+    color: var(--accent-text-color);
+}
+.batton.primary {
+    background-color: var(--batt-prim-bg-color);
+    color: var(--white-text-color);
+}
+.batton.primary:hover,
+.batton.primary:focus {
+    background-color: var(--batt-sec-bg-color);
+    color: var(--secondary-text-color);
+}
+.batton.secondary {
+    background-color: var(--batt-sec-bg-color);
+    color: var(--secondary-text-color);
+}
+.batton.secondary:hover,
+.batton.secondary:focus {
+    background-color: var(--batt-prim-bg-color);
+    color: var(--white-text-color);
+}
