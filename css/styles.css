@@ -9,6 +9,9 @@
   --black-transparent-text-color: rgba(255, 255, 255, 0.6);
   --batt-prim-bg-color: #2196f3;
   --batt-sec-bg-color: #f5f4fa;
+  --black-logo-color: #000000;
+  --example-border-botton: #eeeeee;
+  --header-border-bottom: #ececec;
 }
 
 /* body */
@@ -63,7 +66,7 @@ img {
 }
 
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -83,7 +86,7 @@ section {
 /* header */
 /* flex-box */
 header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--header-border-bottom);
 }
 
 header .link-set {
@@ -107,7 +110,7 @@ header .link-set:last-child {
   padding-bottom: 25px;
   margin-right: 93px;
 
-  color: #000000;
+  color: var(--black-logo-color);
 
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -165,6 +168,7 @@ header .link-set:last-child {
 
 .title-hero {
   display: inline-block;
+  width: 696px;
   margin-bottom: 30px;
 
   font-size: 44px;
@@ -185,6 +189,9 @@ header .link-set:last-child {
 .benefits .list {
   display: flex;
   justify-content: space-between;
+}
+.benefits-set > li {
+  width: 270px;
 }
 .benefits-set > li:not(:last-child) {
   margin-right: 30px;
@@ -230,6 +237,7 @@ header .link-set:last-child {
   margin-bottom: 50px;
 }
 .person {
+  background-color: var(--primary-background-color);
   padding-bottom: 30px;
 }
 .names {
@@ -283,11 +291,13 @@ header .link-set:last-child {
 .example {
   margin-left: 30px;
   margin-top: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--example-border-botton);
 }
+.example .discription {
+  padding: 20px 24px;
+}
+
 .example .companies {
-  margin-top: 20px;
   margin-bottom: 4px;
 }
 
@@ -342,8 +352,8 @@ footer .logo {
   border-radius: 4px;
   margin: 0;
 
-  background-color: var(--primary-background-color);
-  color: var(--accent-text-color);
+  background-color: var(--batt-sec-bg-color);
+  color: var(--secondary-text-color);
   cursor: pointer;
 
   font-family: Roboto, sans-serif;
@@ -353,7 +363,7 @@ footer .logo {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.hero .button {
+.button-hero {
   display: block;
   min-width: 216px;
   min-height: 50px;
@@ -361,24 +371,15 @@ footer .logo {
   margin-left: auto;
   margin-right: auto;
 
+  background-color: var(--batt-prim-bg-color);
+  color: var(--white-text-color);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
-.button.primary {
-  background-color: var(--batt-prim-bg-color);
-  color: var(--white-text-color);
-}
-.button.primary:hover,
-.button.primary:focus {
-  background-color: var(--batt-sec-bg-color);
-  colofr: var(--secondary-text-color);
-}
-.button.secondary {
-  background-color: var(--batt-sec-bg-color);
-  color: var(--secondary-text-color);
-}
+
 .button.secondary:hover,
 .button.secondary:focus {
   background-color: var(--batt-prim-bg-color);
