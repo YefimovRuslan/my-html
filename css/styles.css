@@ -1,6 +1,7 @@
 /* dynamic variables CSS */
 :root {
   --primary-background-color: #ffffff;
+  --white-transparent-color: rgba(255, 255, 255, 10%);
   --secondary-background-color: #2f303a;
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -12,6 +13,8 @@
   --black-logo-color: #000000;
   --example-border-botton: #eeeeee;
   --header-border-bottom: #ececec;
+  --logo-border: #afb1b8;
+  --logo-color: #afb1b8;
 }
 
 /* body */
@@ -98,11 +101,14 @@ header .link-set:last-child {
   margin-left: auto;
 }
 .link-set .link {
+  display: inline-flex;
+  align-items: center;
   padding: 32px 0px;
 }
 .link-set > li:not(:last-child) {
   margin-right: 50px;
 }
+/* icons */
 
 /* logo */
 .logo {
@@ -251,6 +257,7 @@ header .link-set:last-child {
   letter-spacing: 0.03em;
 }
 .profession {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -301,6 +308,15 @@ header .link-set:last-child {
   margin-bottom: 4px;
 }
 
+/* Постійні клієнти */
+.clients .title-big {
+  margin-bottom: 50px;
+}
+.clients .list {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* footer */
 footer {
   padding-top: 60px;
@@ -314,11 +330,15 @@ footer {
 footer .logo {
   margin-bottom: 20px;
   margin-right: 0;
+  padding: 0;
 
   color: var(--white-text-color);
 }
 
 /* map */
+.cont-flex {
+  display: flex;
+}
 .addres-map {
   color: var(--white-text-color);
 }
@@ -341,6 +361,22 @@ footer .logo {
 .addres .contact:hover,
 .addres .contact:focus {
   color: var(--accent-text-color);
+}
+/* media */
+.social-media {
+  color: var(--white-text-color);
+  margin-top: 12px;
+  margin-left: 70px;
+  width: 206px;
+  height: 80px;
+}
+.media-title {
+  margin-bottom: 20px;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* button */
@@ -384,4 +420,70 @@ footer .logo {
 .button.secondary:focus {
   background-color: var(--batt-prim-bg-color);
   color: var(--white-text-color);
+}
+
+/* logo (svg-sprite) */
+/* Contacts */
+.contacts-logo {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.button-logo {
+  width: 170px;
+  height: 92px;
+
+  padding: 0;
+  margin: 0;
+  color: var(--logo-color);
+  border: 1px solid var(--logo-border);
+  background-color: var(--primary-background-color);
+}
+
+.button-logo:hover {
+  color: var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
+}
+.icon-logo {
+  fill: currentColor;
+}
+
+.benefits .benefits-logo {
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--batt-sec-bg-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.team .media {
+  display: flex;
+  padding: 0px 32px;
+}
+.link-media {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: var(--logo-color);
+  border: 0px solid transparent;
+  border-radius: 50%;
+}
+.logo-media {
+  fill: currentColor;
+}
+.link-media:hover {
+  background-color: var(--batt-prim-bg-color);
+  fill: var(--white-text-color);
+}
+
+.media.cont-flex {
+  justify-content: space-between;
+}
+.foot-media {
+  background-color: var(--white-transparent-color);
+  fill: var(--white-text-color);
 }
