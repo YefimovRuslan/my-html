@@ -353,7 +353,45 @@
             </li>
           </ul>
         </div>
+        <div class="subscription">
+          <h3 class="media-title">підпишіться на розсилку</h3>
+          <form class="js-speaker-form" name="subscription">
+            <div class="form-group" role="group">
+              <label>
+                <input
+                  type="email"
+                  class="mail-input"
+                  name="email"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button type="submit" class="button button-hero subscr">
+                Підписатися
+                <svg class="logo-telegram" width="24" height="24">
+                  <use href="./images/icons/sprite.svg#telegram"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- Script to view data in the "console"  -->
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
