@@ -1,0 +1,28 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: $sec-bg-color;
+  color: $white-color;
+  background-image: url(/images/hero/hero-bg.jpg);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  .title__hero {
+    display: inline-block;
+    width: 696px;
+    margin-bottom: 30px;
+
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+  }
+}
+.button__hero {
+  @extend %button__hero;
+}

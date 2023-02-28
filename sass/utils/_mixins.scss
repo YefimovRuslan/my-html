@@ -1,0 +1,15 @@
+@mixin displayBox($type: flex, $ju-cont: center, $al-item: center) {
+  display: $type;
+  justify-content: $ju-cont;
+  align-items: $al-item;
+}
+@mixin bordered($width: 1px, $style: solid, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+@mixin transitions($type: color, $time: 250ms) {
+  transition-property: $type;
+  transition-duration: $time;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

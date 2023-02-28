@@ -1,0 +1,12 @@
+@keyframes changeBgColor {
+  0% {
+    background-color: $white-color;
+  }
+
+  60% {
+    background-color: $accent-color-tr-90;
+  }
+  100% {
+    background-color: $accent-color;
+  }
+}
