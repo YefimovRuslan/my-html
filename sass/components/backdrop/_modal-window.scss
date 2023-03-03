@@ -1,0 +1,44 @@
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  animation-name: changeBgColor;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  width: 528px;
+  height: 581px;
+
+  background-color: $white-color;
+
+  transform: translate(-50%, -50%) scale(1) rotate(2turn);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  @include displayBox;
+  padding: 0;
+  margin: 0;
+  min-width: 30px;
+  min-height: 30px;
+  @include bordered($color: $black-color-tr-10);
+  border-radius: 50%;
+  background-color: $white-color;
+  outline: 0;
+
+  @include transitions($type: fill);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,35 @@
+.benefits__set {
+  @include displayBox($ju-cont: space-between, $al-item: flex-start);
+
+  li {
+    width: 270px;
+  }
+
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits__discr {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.benefits__logo {
+  width: 270px;
+  height: 120px;
+  background-color: $butt-bg-color;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}

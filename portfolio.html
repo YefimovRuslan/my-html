@@ -11,41 +11,49 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
   </head>
   <body>
     <header>
-      <div class="container link-set">
+      <div class="container page-header">
         <a href="./index.html" class="logo">
           <span class="accent">Web</span>Studio
         </a>
 
         <nav>
-          <ul class="navigation list link-set">
-            <li><a href="./index.html" class="link">Студія</a></li>
+          <ul class="navigation list">
             <li>
-              <a href="./portfolio.html" class="link current">Портфоліо</a>
+              <a href="./index.html" class="link navigation__link">Студія</a>
             </li>
-            <li><a href="" class="link">Контакти</a></li>
+            <li>
+              <a href="./portfolio.html" class="link navigation__link current"
+                >Портфоліо</a
+              >
+            </li>
+            <li><a href="" class="link navigation__link">Контакти</a></li>
           </ul>
         </nav>
 
-        <ul class="contacts list link-set">
+        <ul class="contacts list">
           <li>
-            <a href="mailto:info@defstudio.com" target="_blank" class="link">
-              <svg class="contacts-logo" width="16" height="12">
+            <a
+              href="mailto:info@defstudio.com"
+              target="_blank"
+              class="contacts__link link"
+            >
+              <svg class="contacts__logo" width="16" height="12">
                 <use href="./images/icons/sprite.svg#envelope"></use>
               </svg>
               info@defstudio.com</a
             >
           </li>
           <li>
-            <a href="tel:+38-096-111-11-11" target="_blank" class="link">
-              <svg class="contacts-logo" width="10" height="16">
+            <a
+              href="tel:+38-096-111-11-11"
+              target="_blank"
+              class="contacts__link link"
+            >
+              <svg class="contacts__logo" width="10" height="16">
                 <use href="./images/icons/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -62,39 +70,35 @@
           <h2 class="visually-hidden">Приклади портфоліо для бізнеса</h2>
 
           <div class="filter">
-            <ul class="list">
-              <li class="filter-button">
-                <button type="button" class="button secondary">Усі</button>
+            <ul class="list filter__list">
+              <li class="filter__controller">
+                <button type="button" class="filter__button">Усі</button>
               </li>
-              <li class="filter-button">
-                <button type="button" class="button secondary">
-                  Веб-сайти
-                </button>
+              <li class="filter__controller">
+                <button type="button" class="filter__button">Веб-сайти</button>
               </li>
-              <li class="filter-button">
-                <button type="button" class="button secondary">Додатки</button>
+              <li class="filter__controller">
+                <button type="button" class="filter__button">Додатки</button>
               </li>
-              <li class="filter-button">
-                <button type="button" class="button secondary">Дизайн</button>
+              <li class="filter__controller">
+                <button type="button" class="filter__button">Дизайн</button>
               </li>
-              <li class="filter-button">
-                <button type="button" class="button secondary">
-                  Маркетинг
-                </button>
+              <li class="filter__controller">
+                <button type="button" class="filter__button">Маркетинг</button>
               </li>
             </ul>
           </div>
 
-          <ul class="list magazine">
-            <li class="example">
-              <div class="example-thumb">
+          <ul class="list example">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/tehnocryack1.jpg"
                   alt="Ноутбук з відкритим веб-сайтом Технокряк"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -102,20 +106,20 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Технокряк</h3>
-                <p class="sphere">Веб-сайт</p>
+              <div class="company">
+                <h3 class="title-small company__name">Технокряк</h3>
+                <p class="company__sphere">Веб-сайт</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/new-orlean1.jpg"
                   alt="Два баскетболіста грають у баскетбол"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -123,22 +127,22 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">
+              <div class="company">
+                <h3 class="title-small company__name">
                   Постер New Orlean vs Golden Star
                 </h3>
-                <p class="sphere">Дизайн</p>
+                <p class="company__sphere">Дизайн</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/sea-food1.jpg"
                   alt="Логотип ресторана сіфуд"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -146,20 +150,20 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Ресторан Seafood</h3>
-                <p class="sphere">Додаток</p>
+              <div class="company">
+                <h3 class="title-small company__name">Ресторан Seafood</h3>
+                <p class="company__sphere">Додаток</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/prime1.jpg"
                   alt="Навушники"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -167,20 +171,20 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Проєкт Prime</h3>
-                <p class="sphere">Маркетинг</p>
+              <div class="company">
+                <h3 class="title-small company__name">Проєкт Prime</h3>
+                <p class="company__sphere">Маркетинг</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/boxes1.jpg"
                   alt="Упаковки"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -188,20 +192,20 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Проєкт Boxes</h3>
-                <p class="sphere">Додаток</p>
+              <div class="company">
+                <h3 class="title-small company__name">Проєкт Boxes</h3>
+                <p class="company__sphere">Додаток</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/Inspiration-has-no-Borders1.jpg"
                   alt="Монітор з мапою світу"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -209,22 +213,22 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">
+              <div class="company">
+                <h3 class="title-small company__name">
                   Inspiration has no Borders
                 </h3>
-                <p class="sphere">Веб-сайт</p>
+                <p class="company__sphere">Веб-сайт</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/limited-edition1.jpg"
                   alt="Журнал"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -232,20 +236,22 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Видання Limited Edition</h3>
-                <p class="sphere">Дизайн</p>
+              <div class="company">
+                <h3 class="title-small company__name">
+                  Видання Limited Edition
+                </h3>
+                <p class="company__sphere">Дизайн</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/lab1.jpg"
                   alt="Бірка"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -253,20 +259,20 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Проєкт LAB</h3>
-                <p class="sphere">Маркетинг</p>
+              <div class="company">
+                <h3 class="title-small company__name">Проєкт LAB</h3>
+                <p class="company__sphere">Маркетинг</p>
               </div>
             </li>
-            <li class="example">
-              <div class="example-thumb">
+            <li class="example__card">
+              <div class="example__thumb">
                 <img
                   src="./images/portfolio/growing-business1.jpg"
                   alt="Людина працює за ноутбуком"
                   width="370"
                   height="294"
                 />
-                <div class="bg-thumb">
+                <div class="example__discription">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -274,9 +280,9 @@
                   </p>
                 </div>
               </div>
-              <div class="discription">
-                <h3 class="title-small companies">Growing Business</h3>
-                <p class="sphere">Додаток</p>
+              <div class="company">
+                <h3 class="title-small company__name">Growing Business</h3>
+                <p class="company__sphere">Додаток</p>
               </div>
             </li>
           </ul>
@@ -285,67 +291,67 @@
     </main>
 
     <footer>
-      <div class="container cont-flex">
+      <div class="container footer">
         <div>
-          <a href="./index.html" class="logo link">
+          <a href="./index.html" class="logo link footer__logo">
             <span class="accent">Web</span>Studio
           </a>
-          <address class="addres">
+          <address class="address">
             <ul class="list">
-              <li class="list-item">
+              <li class="address__item">
                 <a
                   href="https://goo.gl/maps/LtCzCLsxSn1Pmw8WA"
                   target="_blank"
-                  class="addres-map link"
+                  class="address__map link"
                   >м. Київ, пр-т Лесі Українки, 2</a
                 >
               </li>
-              <li class="list-item">
+              <li class="address__item">
                 <a
                   href="mailto:info@defstudio.com"
                   target="_blank"
-                  class="contact link"
+                  class="address__contact link"
                 >
                   info@defstudio.com</a
                 >
               </li>
-              <li class="list-item">
+              <li class="address__item">
                 <a
                   href="tel:+38-096-111-11-11"
                   target="_blank"
-                  class="contact link"
+                  class="address__contact link"
                   >+38 096 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <div class="social-media">
-          <h3 class="media-title">приєднуйтесь</h3>
-          <ul class="list media cont-flex">
+        <div class="media">
+          <h3 class="media__title">приєднуйтесь</h3>
+          <ul class="list media__list">
             <li>
-              <a href="" class="link-media foot-media">
-                <svg class="lodo-media" width="20" height="20">
+              <a href="" class="link media__link">
+                <svg width="20" height="20">
                   <use href="./images/icons/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link-media foot-media">
+              <a href="" class="link media__link">
                 <svg width="20" height="20">
                   <use href="./images/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link-media foot-media">
+              <a href="" class="link media__link">
                 <svg width="20" height="20">
                   <use href="./images/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link-media foot-media">
+              <a href="" class="link media__link">
                 <svg width="20" height="20">
                   <use href="./images/icons/sprite.svg#linkedin"></use>
                 </svg>
@@ -354,20 +360,20 @@
           </ul>
         </div>
         <div class="subscription">
-          <h3 class="media-title">підпишіться на розсилку</h3>
+          <h3 class="subscription__title">підпишіться на розсилку</h3>
           <form class="js-speaker-form" name="subscription">
-            <div class="form-group" role="group">
+            <div class="subscription__form" role="group">
               <label>
                 <input
                   type="email"
-                  class="mail-input"
+                  class="subscription__input"
                   name="email"
                   placeholder="E-mail"
                 />
               </label>
-              <button type="submit" class="button button-hero subscr">
+              <button type="submit" class="button__hero subscription__button">
                 Підписатися
-                <svg class="logo-telegram" width="24" height="24">
+                <svg class="subscription__logo" width="24" height="24">
                   <use href="./images/icons/sprite.svg#telegram"></use>
                 </svg>
               </button>

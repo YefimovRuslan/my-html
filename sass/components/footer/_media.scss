@@ -1,0 +1,20 @@
+.media {
+  color: $white-color;
+  padding-top: 12px;
+  margin-left: 70px;
+  width: 206px;
+}
+
+.media__title {
+  @extend %footerTitle;
+}
+
+.media__list {
+  @include displayBox($ju-cont: space-between);
+}
+
+.media__link {
+  @extend %media;
+  background-color: $white-color-tr-10;
+  fill: $white-color;
+}

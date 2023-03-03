@@ -1,0 +1,29 @@
+.address {
+  font-style: normal;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__map {
+  color: $white-color;
+
+  @include transitions;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address__contact {
+  color: $white-color-tr-60;
+
+  @include transitions;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
