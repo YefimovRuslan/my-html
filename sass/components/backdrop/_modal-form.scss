@@ -30,11 +30,6 @@
   outline: 0;
 
   @include transitions($type: border-color);
-
-  &:hover,
-  &:focus {
-    border-color: $accent-color;
-  }
 }
 
 .form__logo {
@@ -44,6 +39,11 @@
   fill: $sec-text-color;
 
   @include transitions($type: fill);
+}
+
+.form__field:hover .form__input,
+.form__field:focus .form__input {
+  border-color: $accent-color;
 }
 
 .form__field:hover .form__logo,
