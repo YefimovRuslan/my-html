@@ -4,7 +4,7 @@
 
   background-color: $sec-bg-color;
   color: $white-color;
-  background-image: url("/images/hero/hero-bg.jpg");
+  background-image: url(../../images/hero/hero-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url("/images/hero/hero-bg@2x.jpg");
+    background-image: url(../..//images/hero/hero-bg@2x.jpg);
   }
 }
 
@@ -48,7 +48,7 @@
   (min-resolution: 288dpi),
   (min-resolution: 3dppx) {
   .hero {
-    background-image: url("/images/hero/hero-bg@3x.jpg");
+    background-image: url(../..//images/hero/hero-bg@3x.jpg);
   }
 }
 
