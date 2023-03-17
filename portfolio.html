@@ -17,56 +17,157 @@
     <header>
       <div class="container page-header">
         <a href="./index.html" class="logo">
-          <span class="accent">Web</span>Studio
+          <span class="logo--accent">Web</span>Studio
         </a>
 
-        <nav>
-          <ul class="navigation list">
+        <div class="page-header__flex">
+          <nav>
+            <ul class="navigation list">
+              <li>
+                <a href="./index.html" class="link navigation__link">Студія</a>
+              </li>
+              <li>
+                <a
+                  href="./portfolio.html"
+                  class="link navigation__link navigation__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="" class="link navigation__link">Контакти</a></li>
+            </ul>
+          </nav>
+
+          <ul class="contacts list">
             <li>
-              <a href="./index.html" class="link navigation__link">Студія</a>
-            </li>
-            <li>
-              <a href="./portfolio.html" class="link navigation__link current"
-                >Портфоліо</a
+              <a
+                href="mailto:info@defstudio.com"
+                target="_blank"
+                class="contacts__link link"
+              >
+                <svg class="contacts__logo" width="16" height="12">
+                  <use href="./images/icons/sprite.svg#envelope"></use>
+                </svg>
+                info@defstudio.com</a
               >
             </li>
-            <li><a href="" class="link navigation__link">Контакти</a></li>
+            <li>
+              <a
+                href="tel:+38-096-111-11-11"
+                target="_blank"
+                class="contacts__link link"
+              >
+                <svg class="contacts__logo" width="10" height="16">
+                  <use href="./images/icons/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
+        </div>
 
-        <ul class="contacts list">
-          <li>
-            <a
-              href="mailto:info@defstudio.com"
-              target="_blank"
-              class="contacts__link link"
+        <button
+          type="button"
+          class="mobile-button is-open mobile-button--open js-open-menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class=""
+            width="40"
+            height="40"
+            aria-label="mobile menu switcher"
+          >
+            <use
+              class="mobile-menu--open"
+              href="./images/icons/sprite.svg#menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu js-menu-container">
+          <button
+            type="button"
+            class="mobile-button mobile-button--close js-close-menu"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class=""
+              width="40"
+              height="40"
+              aria-label="mobile menu switcher"
             >
-              <svg class="contacts__logo" width="16" height="12">
-                <use href="./images/icons/sprite.svg#envelope"></use>
-              </svg>
-              info@defstudio.com</a
-            >
-          </li>
-          <li>
-            <a
-              href="tel:+38-096-111-11-11"
-              target="_blank"
-              class="contacts__link link"
-            >
-              <svg class="contacts__logo" width="10" height="16">
-                <use href="./images/icons/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use
+                class="mobile-menu--close"
+                href="./images/icons/sprite.svg#close-mobile"
+              ></use>
+            </svg>
+          </button>
+
+          <nav>
+            <ul class="list mobile-navigation">
+              <li class="mobile-navigation__item">
+                <a href="./index.html" class="link mobile-navigation__link"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a
+                  href="./portfolio.html"
+                  class="link mobile-navigation__link mobile-navigation__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a href="" class="link mobile-navigation__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="list mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+38-096-111-11-11"
+                target="_blank"
+                class="link mobile-contacts__link--tel"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@defstudio.com"
+                target="_blank"
+                class="link mobile-contacts__link--mail"
+              >
+                info@defstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="list mobile-media">
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Instagram</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Twitter</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Facebook</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
-      <div class="container">
-        <!--Приклади портфоліо-->
-        <section class="section">
+      <!--Приклади портфоліо-->
+      <section class="section">
+        <div class="container">
           <h2 class="visually-hidden">Приклади портфоліо для бізнеса</h2>
 
           <div class="filter">
@@ -93,10 +194,16 @@
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/tehnocryack1.jpg"
+                  srcset="
+                    ../../images/portfolio/tehnocryack/tehnocryack.jpg    270w,
+                    ../../images/portfolio/tehnocryack/tehnocryack@2x.jpg 540w,
+                    ../../images/portfolio/tehnocryack/tehnocryack@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/tehnocryack/tehnocryack.jpg"
                   alt="Ноутбук з відкритим веб-сайтом Технокряк"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -107,17 +214,23 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Технокряк</h3>
+                <h3 class="title--small company__name">Технокряк</h3>
                 <p class="company__sphere">Веб-сайт</p>
               </div>
             </li>
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/new-orlean1.jpg"
+                  srcset="
+                    ../../images/portfolio/new-orlean/new-orlean.jpg    270w,
+                    ../../images/portfolio/new-orlean/new-orlean@2x.jpg 540w,
+                    ../../images/portfolio/new-orlean/new-orlean@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/new-orlean/new-orlean.jpg"
                   alt="Два баскетболіста грають у баскетбол"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -128,7 +241,7 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">
+                <h3 class="title--small company__name">
                   Постер New Orlean vs Golden Star
                 </h3>
                 <p class="company__sphere">Дизайн</p>
@@ -137,10 +250,16 @@
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/sea-food1.jpg"
+                  srcset="
+                    ../../images/portfolio/sea-food/sea-food.jpg    270w,
+                    ../../images/portfolio/sea-food/sea-food@2x.jpg 540w,
+                    ../../images/portfolio/sea-food/sea-food@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/sea-food/sea-food.jpg"
                   alt="Логотип ресторана сіфуд"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -151,17 +270,23 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Ресторан Seafood</h3>
+                <h3 class="title--small company__name">Ресторан Seafood</h3>
                 <p class="company__sphere">Додаток</p>
               </div>
             </li>
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/prime1.jpg"
+                  srcset="
+                    ../../images/portfolio/prime/prime.jpg    270w,
+                    ../../images/portfolio/prime/prime@2x.jpg 540w,
+                    ../../images/portfolio/prime/prime@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/prime/prime.jpg"
                   alt="Навушники"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -172,17 +297,23 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Проєкт Prime</h3>
+                <h3 class="title--small company__name">Проєкт Prime</h3>
                 <p class="company__sphere">Маркетинг</p>
               </div>
             </li>
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/boxes1.jpg"
+                  srcset="
+                    ../../images/portfolio/boxes/boxes.jpg    270w,
+                    ../../images/portfolio/boxes/boxes@2x.jpg 540w,
+                    ../../images/portfolio/boxes/boxes@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/boxes/boxes.jpg"
                   alt="Упаковки"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -193,17 +324,23 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Проєкт Boxes</h3>
+                <h3 class="title--small company__name">Проєкт Boxes</h3>
                 <p class="company__sphere">Додаток</p>
               </div>
             </li>
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/Inspiration-has-no-Borders1.jpg"
+                  srcset="
+                    ../../images/portfolio/Inspiration-has-no-Borders/Inspiration-has-no-Borders.jpg    270w,
+                    ../../images/portfolio/Inspiration-has-no-Borders/Inspiration-has-no-Borders@2x.jpg 540w,
+                    ../../images/portfolio/Inspiration-has-no-Borders/Inspiration-has-no-Borders@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/Inspiration-has-no-Borders/Inspiration-has-no-Borders.jpg"
                   alt="Монітор з мапою світу"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -214,7 +351,7 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">
+                <h3 class="title--small company__name">
                   Inspiration has no Borders
                 </h3>
                 <p class="company__sphere">Веб-сайт</p>
@@ -223,10 +360,16 @@
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/limited-edition1.jpg"
+                  srcset="
+                    ../../images/portfolio/limited-edition/limited-edition.jpg    270w,
+                    ../../images/portfolio/limited-edition/limited-edition@2x.jpg 540w,
+                    ../../images/portfolio/limited-edition/limited-edition@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/limited-edition/limited-edition.jpg"
                   alt="Журнал"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -237,7 +380,7 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">
+                <h3 class="title--small company__name">
                   Видання Limited Edition
                 </h3>
                 <p class="company__sphere">Дизайн</p>
@@ -246,10 +389,16 @@
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/lab1.jpg"
+                  srcset="
+                    ../../images/portfolio/lab/lab.jpg    270w,
+                    ../../images/portfolio/lab/lab@2x.jpg 540w,
+                    ../../images/portfolio/lab/lab@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="../../images/portfolio/lab/lab.jpg"
                   alt="Бірка"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -260,17 +409,23 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Проєкт LAB</h3>
+                <h3 class="title--small company__name">Проєкт LAB</h3>
                 <p class="company__sphere">Маркетинг</p>
               </div>
             </li>
             <li class="example__card">
               <div class="example__thumb">
                 <img
-                  src="./images/portfolio/growing-business1.jpg"
+                  srcset="
+                    ../../images/portfolio/growing-business/growing-business.jpg    270w,
+                    ../../images/portfolio/growing-business/growing-business@2x.jpg 540w,
+                    ../../images/portfolio/growing-business/growing-business@3x.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                  src="./images/portfolio/growing-business/growing-business.jpg"
                   alt="Людина працює за ноутбуком"
-                  width="370"
-                  height="294"
                 />
                 <div class="example__discription">
                   <p>
@@ -281,83 +436,85 @@
                 </div>
               </div>
               <div class="company">
-                <h3 class="title-small company__name">Growing Business</h3>
+                <h3 class="title--small company__name">Growing Business</h3>
                 <p class="company__sphere">Додаток</p>
               </div>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="container footer">
-        <div>
-          <a href="./index.html" class="logo link footer__logo">
-            <span class="accent">Web</span>Studio
-          </a>
-          <address class="address">
-            <ul class="list">
-              <li class="address__item">
-                <a
-                  href="https://goo.gl/maps/LtCzCLsxSn1Pmw8WA"
-                  target="_blank"
-                  class="address__map link"
-                  >м. Київ, пр-т Лесі Українки, 2</a
-                >
+        <div class="footer__flex">
+          <div class="address">
+            <a href="./index.html" class="logo link footer__logo">
+              <span class="logo--accent">Web</span>Studio
+            </a>
+            <address class="address__list">
+              <ul class="list">
+                <li class="address__item">
+                  <a
+                    href="https://goo.gl/maps/LtCzCLsxSn1Pmw8WA"
+                    target="_blank"
+                    class="address__map link"
+                    >м. Київ, пр-т Лесі Українки, 2</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="mailto:info@defstudio.com"
+                    target="_blank"
+                    class="address__contact link"
+                  >
+                    info@defstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="tel:+38-096-111-11-11"
+                    target="_blank"
+                    class="address__contact link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="media">
+            <h3 class="media__title">приєднуйтесь</h3>
+            <ul class="list media__list">
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a
-                  href="mailto:info@defstudio.com"
-                  target="_blank"
-                  class="address__contact link"
-                >
-                  info@defstudio.com</a
-                >
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a
-                  href="tel:+38-096-111-11-11"
-                  target="_blank"
-                  class="address__contact link"
-                  >+38 096 111 11 11</a
-                >
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="media">
-          <h3 class="media__title">приєднуйтесь</h3>
-          <ul class="list media__list">
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscription">
           <h3 class="subscription__title">підпишіться на розсилку</h3>
@@ -371,7 +528,7 @@
                   placeholder="E-mail"
                 />
               </label>
-              <button type="submit" class="button__hero subscription__button">
+              <button type="submit" class="hero__button subscription__button">
                 Підписатися
                 <svg class="subscription__logo" width="24" height="24">
                   <use href="./images/icons/sprite.svg#telegram"></use>
@@ -382,6 +539,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Script of mobile menu -->
+    <script src="./js/mobile-menu.js"></script>
 
     <!-- Script to view data in the "console"  -->
     <script>

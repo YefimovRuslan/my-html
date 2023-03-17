@@ -1,16 +1,31 @@
 .example {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
 
-  margin-left: -30px;
-  margin-top: -30px;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .example__card {
-  margin-left: 30px;
-  margin-top: 30px;
-  width: 370px;
   @include bordered($color: $example-border-color);
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .example__thumb {

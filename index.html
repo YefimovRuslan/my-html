@@ -17,51 +17,152 @@
     <header>
       <div class="container page-header">
         <a href="./index.html" class="logo">
-          <span class="accent">Web</span>Studio
+          <span class="logo--accent">Web</span>Studio
         </a>
 
-        <nav>
-          <ul class="navigation list">
-            <li>
-              <a href="./index.html" class="link navigation__link current"
-                >Студія</a
-              >
-            </li>
-            <li>
-              <a href="./portfolio.html" class="link navigation__link"
-                >Портфоліо</a
-              >
-            </li>
-            <li><a href="" class="link navigation__link">Контакти</a></li>
-          </ul>
-        </nav>
+        <div class="page-header__flex">
+          <nav>
+            <ul class="navigation list">
+              <li>
+                <a
+                  href="./index.html"
+                  class="link navigation__link navigation__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li>
+                <a href="./portfolio.html" class="link navigation__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="" class="link navigation__link">Контакти</a></li>
+            </ul>
+          </nav>
 
-        <ul class="contacts list">
-          <li>
-            <a
-              href="mailto:info@defstudio.com"
-              target="_blank"
-              class="contacts__link link"
+          <ul class="contacts list">
+            <li>
+              <a
+                href="mailto:info@defstudio.com"
+                target="_blank"
+                class="contacts__link link"
+              >
+                <svg class="contacts__logo" width="16" height="12">
+                  <use href="./images/icons/sprite.svg#envelope"></use>
+                </svg>
+                info@defstudio.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="tel:+38-096-111-11-11"
+                target="_blank"
+                class="contacts__link link"
+              >
+                <svg class="contacts__logo" width="10" height="16">
+                  <use href="./images/icons/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <button
+          type="button"
+          class="mobile-button is-open mobile-button--open js-open-menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class=""
+            width="40"
+            height="40"
+            aria-label="mobile menu switcher"
+          >
+            <use
+              class="mobile-menu--open"
+              href="./images/icons/sprite.svg#menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu js-menu-container">
+          <button
+            type="button"
+            class="mobile-button mobile-button--close js-close-menu"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class=""
+              width="40"
+              height="40"
+              aria-label="mobile menu switcher"
             >
-              <svg class="contacts__logo" width="16" height="12">
-                <use href="./images/icons/sprite.svg#envelope"></use>
-              </svg>
-              info@defstudio.com</a
-            >
-          </li>
-          <li>
-            <a
-              href="tel:+38-096-111-11-11"
-              target="_blank"
-              class="contacts__link link"
-            >
-              <svg class="contacts__logo" width="10" height="16">
-                <use href="./images/icons/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use
+                class="mobile-menu--close"
+                href="./images/icons/sprite.svg#close-mobile"
+              ></use>
+            </svg>
+          </button>
+
+          <nav>
+            <ul class="list mobile-navigation">
+              <li class="mobile-navigation__item">
+                <a
+                  href="./index.html"
+                  class="link mobile-navigation__link mobile-navigation__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a href="./portfolio.html" class="link mobile-navigation__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a href="" class="link mobile-navigation__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="list mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+38-096-111-11-11"
+                target="_blank"
+                class="link mobile-contacts__link--tel"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@defstudio.com"
+                target="_blank"
+                class="link mobile-contacts__link--mail"
+              >
+                info@defstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="list mobile-media">
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Instagram</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Twitter</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">Facebook</a>
+            </li>
+            <li class="mobile-media__item">
+              <a href="" class="link mobile-media__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -69,8 +170,8 @@
       <!--Герой-->
       <section class="hero">
         <div class="container">
-          <h1 class="title__hero">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button__hero" data-modal-open>
+          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+          <button type="button" class="hero__button" data-modal-open>
             Замовити послугу
           </button>
         </div>
@@ -83,15 +184,11 @@
           <ul class="list benefits__set">
             <li>
               <div class="benefits__logo">
-                <svg>
-                  <use
-                    href="./images/icons/sprite.svg#antenna"
-                    width="70"
-                    height="70"
-                  ></use>
+                <svg width="70" height="70">
+                  <use href="./images/icons/sprite.svg#antenna"></use>
                 </svg>
               </div>
-              <h3 class="title-small benefits__title">увага до деталей</h3>
+              <h3 class="title--small benefits__title">увага до деталей</h3>
               <p class="benefits__discr">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
@@ -100,15 +197,11 @@
 
             <li>
               <div class="benefits__logo">
-                <svg>
-                  <use
-                    href="./images/icons/sprite.svg#clock"
-                    width="70"
-                    height="70"
-                  ></use>
+                <svg width="70" height="70">
+                  <use href="./images/icons/sprite.svg#clock" width="70"></use>
                 </svg>
               </div>
-              <h3 class="title-small benefits__title">пунктуальність</h3>
+              <h3 class="title--small benefits__title">пунктуальність</h3>
               <p class="benefits__discr">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
@@ -117,15 +210,11 @@
 
             <li>
               <div class="benefits__logo">
-                <svg>
-                  <use
-                    href="./images/icons/sprite.svg#diagram"
-                    width="70"
-                    height="70"
-                  ></use>
+                <svg width="70" height="70">
+                  <use href="./images/icons/sprite.svg#diagram"></use>
                 </svg>
               </div>
-              <h3 class="title-small benefits__title">планування</h3>
+              <h3 class="title--small benefits__title">планування</h3>
               <p class="benefits__discr">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
@@ -133,15 +222,11 @@
 
             <li>
               <div class="benefits__logo">
-                <svg>
-                  <use
-                    href="./images/icons/sprite.svg#astronaut"
-                    width="70"
-                    height="70"
-                  ></use>
+                <svg width="70" height="70">
+                  <use href="./images/icons/sprite.svg#astronaut"></use>
                 </svg>
               </div>
-              <h3 class="title-small benefits__title">сучасні технології</h3>
+              <h3 class="title--small benefits__title">сучасні технології</h3>
               <p class="benefits__discr">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
@@ -152,17 +237,20 @@
       </section>
 
       <!--Чим ми займаємося-->
-      <section class="section diraction">
+      <section class="section direction">
         <div class="container">
-          <h2 class="title-big diraction__title">Чим ми займаємося</h2>
+          <h2 class="title--big diraction__title">Чим ми займаємося</h2>
           <ul class="list diraction__list">
             <li>
               <div class="diraction__thumb">
                 <img
-                  src="./images/picture/box-1.jpg"
+                  srcset="
+                    ./images/direction/box-1.jpg    1x,
+                    ./images/direction/box-1@2x.jpg 2x,
+                    ./images/direction/box-1@3x.jpg 3x
+                  "
+                  src="./images/direction/box-1.jpg"
                   alt="верстка сайтів"
-                  width="370"
-                  height="294"
                 />
                 <h3>десктопні додатки</h3>
               </div>
@@ -170,10 +258,13 @@
             <li>
               <div class="diraction__thumb">
                 <img
-                  src="./images/picture/box-2.jpg"
+                  srcset="
+                    ./images/direction/box-2.jpg    1x,
+                    ./images/direction/box-2@2x.jpg 2x,
+                    ./images/direction/box-2@3x.jpg 3x
+                  "
+                  src="./images/direction/box-2.jpg"
                   alt="адаптація сайтів для мобільних телефонів"
-                  width="370"
-                  height="294"
                 />
                 <h3>мобільні додатки</h3>
               </div>
@@ -181,10 +272,13 @@
             <li>
               <div class="diraction__thumb">
                 <img
-                  src="./images/picture/box-3.jpg"
+                  srcset="
+                    ./images/direction/box-3.jpg    1x,
+                    ./images/direction/box-3@2x.jpg 2x,
+                    ./images/direction/box-3@3x.jpg 3x
+                  "
+                  src="./images/direction/box-3.jpg"
                   alt="веб дізайн"
-                  width="370"
-                  height="294"
                 />
                 <h3>дизайнерські рішення</h3>
               </div>
@@ -196,17 +290,24 @@
       <!---Наша команда-->
       <section class="section team">
         <div class="container">
-          <h2 class="title-big team__title">Наша команда</h2>
+          <h2 class="title--big team__title">Наша команда</h2>
           <ul class="list team__list">
             <li class="person">
               <img
-                src="./images/team/ihor-demyanenko.jpg"
-                alt="фото Ігоря Дем'яненко"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/ihor-demyanenko/ihor-demyanenko.jpg    270w,
+                  ./images/team/ihor-demyanenko/ihor-demyanenko@2x.jpg 540w,
+                  ./images/team/ihor-demyanenko/ihor-demyanenko@3x.jpg 810w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                src="./images/team/ihor-demyanenko/ihor-demyanenko.jpg"
+                alt="фото
+              Ігоря Дем'яненко"
               />
               <div class="person__text-wrap">
-                <h3 class="title-small person__name">Ігор Дем'яненко</h3>
+                <h3 class="title--small person__name">Ігор Дем'яненко</h3>
                 <p class="person__profession">Product Designer</p>
               </div>
               <ul class="list person__media">
@@ -243,13 +344,19 @@
 
             <li class="person">
               <img
-                src="./images/team/olha-repina.jpg"
+                srcset="
+                  ./images/team/olha-repina/olha-repina.jpg    270w,
+                  ./images/team/olha-repina/olha-repina@2x.jpg 540w,
+                  ./images/team/olha-repina/olha-repina@3x.jpg 810w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                src="./images/team/olha-repina/olha-repina.jpg"
                 alt="фото Ольги Рєпіної"
-                width="270"
-                height="260"
               />
               <div class="person__text-wrap">
-                <h3 class="title-small person__name">Ольга Рєпіна</h3>
+                <h3 class="title--small person__name">Ольга Рєпіна</h3>
                 <p class="person__profession">Frontend Developer</p>
               </div>
               <ul class="list person__media">
@@ -286,13 +393,19 @@
 
             <li class="person">
               <img
-                src="./images/team/mykola-tarasov.jpg"
+                srcset="
+                  ./images/team/mykola-tarasov/mykola-tarasov.jpg    270w,
+                  ./images/team/mykola-tarasov/mykola-tarasov@2x.jpg 540w,
+                  ./images/team/mykola-tarasov/mykola-tarasov@3x.jpg 810w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                src="./images/team/mykola-tarasov/mykola-tarasov.jpg"
                 alt="фото Миколи Тарасова"
-                width="270"
-                height="260"
               />
               <div class="person__text-wrap">
-                <h3 class="title-small person__name">Микола Тарасов</h3>
+                <h3 class="title--small person__name">Микола Тарасов</h3>
                 <p class="person__profession">Marketing</p>
               </div>
               <ul class="list person__media">
@@ -329,13 +442,19 @@
 
             <li class="person">
               <img
-                src="./images/team/mychailo-yermakov.jpg"
+                srcset="
+                  ./images/team/mychailo-yermakov/mychailo-yermakov.jpg    270w,
+                  ./images/team/mychailo-yermakov/mychailo-yermakov@2x.jpg 540w,
+                  ./images/team/mychailo-yermakov/mychailo-yermakov@3x.jpg 810w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width:
+              480px) 450px, 100vw"
+                src="./images/team/mychailo-yermakov/mychailo-yermakov.jpg"
                 alt="фото Михайло Єрмакова"
-                width="270"
-                height="260"
               />
               <div class="person__text-wrap">
-                <h3 class="title-small person__name">Михайло Єрмаков</h3>
+                <h3 class="title--small person__name">Михайло Єрмаков</h3>
                 <p class="person__profession">UI Designer</p>
               </div>
               <ul class="list person__media">
@@ -376,7 +495,7 @@
       <!-- Постійні клієнти -->
       <section class="section clients">
         <div class="container">
-          <h2 class="title-big clients__title">Постійні клієнти</h2>
+          <h2 class="title--big clients__title">Постійні клієнти</h2>
           <ul class="list clients__list">
             <li>
               <button class="button clients__box">
@@ -427,72 +546,74 @@
 
     <footer>
       <div class="container footer">
-        <div>
-          <a href="./index.html" class="logo link footer__logo">
-            <span class="accent">Web</span>Studio
-          </a>
-          <address class="address">
-            <ul class="list">
-              <li class="address__item">
-                <a
-                  href="https://goo.gl/maps/LtCzCLsxSn1Pmw8WA"
-                  target="_blank"
-                  class="address__map link"
-                  >м. Київ, пр-т Лесі Українки, 2</a
-                >
+        <div class="footer__flex">
+          <div class="address">
+            <a href="./index.html" class="logo link footer__logo">
+              <span class="logo--accent">Web</span>Studio
+            </a>
+            <address class="address__list">
+              <ul class="list">
+                <li class="address__item">
+                  <a
+                    href="https://goo.gl/maps/LtCzCLsxSn1Pmw8WA"
+                    target="_blank"
+                    class="address__map link"
+                    >м. Київ, пр-т Лесі Українки, 2</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="mailto:info@defstudio.com"
+                    target="_blank"
+                    class="address__contact link"
+                  >
+                    info@defstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="tel:+38-096-111-11-11"
+                    target="_blank"
+                    class="address__contact link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="media">
+            <h3 class="media__title">приєднуйтесь</h3>
+            <ul class="list media__list">
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a
-                  href="mailto:info@defstudio.com"
-                  target="_blank"
-                  class="address__contact link"
-                >
-                  info@defstudio.com</a
-                >
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a
-                  href="tel:+38-096-111-11-11"
-                  target="_blank"
-                  class="address__contact link"
-                  >+38 096 111 11 11</a
-                >
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="link media__link">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="media">
-          <h3 class="media__title">приєднуйтесь</h3>
-          <ul class="list media__list">
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="link media__link">
-                <svg width="20" height="20">
-                  <use href="./images/icons/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscription">
           <h3 class="subscription__title">підпишіться на розсилку</h3>
@@ -506,7 +627,7 @@
                   placeholder="E-mail"
                 />
               </label>
-              <button type="submit" class="button__hero subscription__button">
+              <button type="submit" class="hero__button subscription__button">
                 Підписатися
                 <svg class="subscription__logo" width="24" height="24">
                   <use href="./images/icons/sprite.svg#telegram"></use>
@@ -592,6 +713,9 @@
         </form>
       </div>
     </div>
+
+    <!-- Script of mobile menu -->
+    <script src="./js/mobile-menu.js"></script>
 
     <!-- Script of modal window -->
     <script src="./js/modal.js"></script>

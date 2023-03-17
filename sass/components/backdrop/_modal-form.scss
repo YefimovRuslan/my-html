@@ -82,7 +82,7 @@
 .accept__checkbox:checked + .accept__logo {
   border-color: transparent;
   background-color: $accent-color;
-  background-image: url(/images/icons/seagull.svg);
+  background-image: url(../../../images/icons/seagull.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
@@ -95,7 +95,7 @@
 }
 
 .button__modal {
-  @extend %button__hero;
+  @extend %hero__button;
   padding: 10px 52px;
   min-width: 200px;
 }

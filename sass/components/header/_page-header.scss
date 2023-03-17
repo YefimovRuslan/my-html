@@ -2,6 +2,17 @@ header {
   border-bottom: 1px solid $header-border-color;
 }
 .page-header {
+  // position: relative;
   @include displayBox($ju-cont: start);
-  min-height: 80px;
+}
+
+.page-header__flex {
+  position: relative;
+
+  width: 100%;
+  @include displayBox($ju-cont: space-between, $al-item: center);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }

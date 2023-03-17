@@ -1,6 +1,10 @@
 .direction {
-  padding-top: 0;
-  padding-bottom: 113px;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .diraction__title {
