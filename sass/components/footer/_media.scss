@@ -1,0 +1,33 @@
+.media {
+  color: $white-color;
+  width: 206px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    padding-top: 12px;
+  }
+}
+
+.media__title {
+  @extend %footerTitle;
+}
+
+.media__list {
+  @include displayBox($ju-cont: space-between);
+}
+
+.media__link {
+  @extend %media;
+  background-color: $white-color-tr-10;
+  fill: $white-color;
+}

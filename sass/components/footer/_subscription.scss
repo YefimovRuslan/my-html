@@ -1,0 +1,66 @@
+.subscription {
+  color: $white-color;
+  margin-left: auto;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
+}
+.subscription__title {
+  @extend %footerTitle;
+}
+
+.subscription__form {
+  @media screen and (min-width: 1200px) {
+    @include displayBox($ju-cont: space-between);
+  }
+}
+
+.subscription__input {
+  height: 50px;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  max-width: 100%;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
+
+  @include bordered($color: $white-color-tr-30);
+  border-radius: 4px;
+  background-color: $sec-bg-color;
+  color: $white-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: 0;
+
+  @include transitions;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.subscription__button {
+  @include displayBox;
+  width: 200px;
+  height: 50px;
+  padding: 13px 28px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+
+  .subscription__logo {
+    margin-left: 10px;
+  }
+}
